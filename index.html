@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>결혼합니다</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Serif KR", "Apple SD Gothic Neo", serif;
+  background-color: #f6f5f3;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* Scroll Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.9s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Sections */
+.section {
+  padding: 80px 24px;
+  text-align: center;
+}
+.section-light {
+  background-color: #faf9f7;
+}
+.section-dark {
+  background: linear-gradient(180deg, #f1efe9 0%, #faf9f7 100%);
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  background:
+    linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.9)),
+    url("https://images.unsplash.com/photo-1542314831-068cd1dbfeeb");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-inner {
+  text-align: center;
+  padding: 0 24px;
+}
+
+.hero-small {
+  font-size: 13px;
+  letter-spacing: 3px;
+  color: #777;
+  margin-bottom: 16px;
+}
+.hero-title {
+  font-size: 30px;
+  margin-bottom: 24px;
+}
+.hero-names {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+.hero-date {
+  font-size: 15px;
+  color: #555;
+}
+
+.divider {
+  width: 40px;
+  height: 1px;
+  background-color: #bbb;
+  margin: 32px auto;
+}
+
+/* Message */
+.message {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #444;
+  white-space: pre-line;
+}
+
+/* Venue Image (예식장 무드) */
+.venue-image {
+  width: 100%;
+  height: 240px;
+  border-radius: 4px;
+  background-image: url("https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac");
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 28px;
+}
+
+/* Info Box */
+.info-box {
+  border: 1px solid #ddd;
+  padding: 28px 20px;
+  font-size: 14px;
+  color: #555;
+  background-color: #fff;
+}
+.info-row {
+  margin-bottom: 14px;
+}
+.place {
+  font-weight: 500;
+  color: #333;
+}
+
+/* Map Buttons */
+.map-buttons {
+  margin-top: 24px;
+  display: flex;
+  gap: 10px;
+}
+.map-buttons a {
+  flex: 1;
+  padding: 12px 0;
+  font-size: 13px;
+  border: 1px solid #ccc;
+  text-decoration: none;
+  color: #333;
+  border-radius: 2px;
+}
+
+/* Guestbook */
+.guestbook {
+  text-align: left;
+}
+.guestbook textarea {
+  width: 100%;
+  height: 80px;
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  resize: none;
+  margin-bottom: 12px;
+}
+.guestbook button {
+  width: 100%;
+  padding: 12px 0;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  font-size: 14px;
+}
+
+.guestbook-list {
+  margin-top: 32px;
+}
+.guestbook-item {
+  border-bottom: 1px solid #eee;
+  padding: 16px 0;
+  font-size: 14px;
+}
+.guestbook-item span {
+  display: block;
+  font-size: 12px;
+  color: #888;
+  margin-top: 6px;
+}
+
+/* Footer */
+.footer {
+  font-size: 12px;
+  color: #aaa;
+  text-align: center;
+  padding: 60px 0 80px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-inner reveal">
+    <div class="hero-small">WEDDING INVITATION</div>
+    <div class="hero-title">결혼합니다</div>
+    <div class="divider"></div>
+    <div class="hero-names">신랑 ○○ · 신부 박소영</div>
+    <div class="hero-date">2026년 12월 26일 토요일</div>
+  </div>
+</section>
+
+<!-- Message -->
+<section class="section section-light">
+  <div class="message reveal">
+    서로의 하루가 되어  
+    같은 방향을 바라보며  
+    함께 걷고자 합니다.
+
+    소중한 분들을 모시고  
+    그 시작의 자리에  
+    인사드리고 싶습니다.
+  </div>
+</section>
+
+<!-- Venue -->
+<section class="section section-dark">
+  <div class="reveal">
+    <div class="hero-small">WEDDING VENUE</div>
+    <div class="divider"></div>
+
+    <div class="venue-image"></div>
+
+    <div class="info-box">
+      <div class="info-row">
+        <strong>예식장</strong><br />
+        신도림 더링크 호텔 예식장
+      </div>
+      <div class="info-row">
+        <strong>주소</strong><br />
+        서울 구로구 경인로 610
+      </div>
+      <div class="info-row">
+        <strong>교통</strong><br />
+        지하철 1·2호선 신도림역 도보 3분
+      </div>
+
+      <div class="map-buttons">
+        <a href="https://place.map.kakao.com/801090941" target="_blank">카카오맵</a>
+        <a href="https://naver.me/FqWtKQUF" target="_blank">네이버지도</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Guestbook -->
+<section class="section section-light">
+  <div class="reveal">
+    <div class="hero-small">GUEST BOOK</div>
+    <div class="divider"></div>
+
+    <div class="guestbook">
+      <textarea placeholder="축하 메시지를 남겨주세요."></textarea>
+      <button>메시지 남기기</button>
+
+      <div class="guestbook-list">
+        <div class="guestbook-item">
+          결혼 진심으로 축하드려요! 행복하세요 🤍
+          <span>조재우/span>
+        </div>
+        <div class="guestbook-item">
+          두 분의 앞날에 사랑과 기쁨이 가득하길 바랍니다.
+          <span>조재스</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<div class="footer reveal">
+  소중한 발걸음에 진심으로 감사드립니다.
+</div>
+
+<script>
+const reveals = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("active");
+    }
+  });
+}, { threshold: 0.15 });
+
+reveals.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
